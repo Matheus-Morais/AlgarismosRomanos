@@ -11,6 +11,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E7448AAE
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conversor.Testes", "tests\Conversor.Testes\Conversor.Testes.csproj", "{6965A5FB-56B1-45ED-AD30-065E7F342003}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Itens de Solução", "Itens de Solução", "{01534AE9-2BA8-4D9D-902D-0D8A47776990}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,5 +37,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{D385D7CB-E0B0-4689-B5D8-CC7A75961B79} = {64148B14-C675-4A6D-850D-0DDDEF3938E9}
 		{6965A5FB-56B1-45ED-AD30-065E7F342003} = {E7448AAE-40CB-4471-AAE3-F7D0DA812D58}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {926A63D5-3A36-428B-A323-99E4D92CE43E}
 	EndGlobalSection
 EndGlobal

@@ -48,6 +48,21 @@ namespace Conversor.Testes
 
             _output.WriteLine("Resultado da Subtração: " + resposta);
         }
+
+        [Theory]
+        [InlineData(2, 3, 5)]
+        [InlineData(-2, 3, 1)]
+        [InlineData(0, 0, 0)]
+        public void Should_Add(int a, int b, int expected)
+        {
+            // Act - Agir
+            var resultado = Calc.Adicionar(a, b);
+
+            // Assert - Conferir
+            Assert.Equal(expected, resultado);
+
+            _output.WriteLine("Resultado da Soma: " + resultado);
+        }
     }
 
     public class Calc
