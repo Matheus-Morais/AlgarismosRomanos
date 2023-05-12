@@ -12,18 +12,21 @@ public class ConversorTests
         III - 3
         IV - 4
         V - 5
+        X - 10
      */
 
     Conversor conversor = new Conversor();
 
-    [Fact]
-    public void TesteConversorInteiroParaRomano()
+    [Theory]
+    [InlineData(10, "X")]
+    [InlineData(1, "I")]
+    [InlineData(5, "V")]
+    [InlineData(3, "III")]
+    public void TesteConversorInteiroParaRomano(int inteiro, string romano)
     {
-        int a = 10;
-        string esperado = "X";
 
-        string algarismo = conversor.InteiroParaRomano(a);
+        string algarismo = conversor.InteiroParaRomano(inteiro);
 
-        Assert.Equal(esperado, algarismo);
+        Assert.Equal(romano, algarismo);
     }
 }
