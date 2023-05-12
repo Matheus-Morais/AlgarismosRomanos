@@ -18,10 +18,13 @@ public class ConversorTests
     Conversor conversor = new Conversor();
 
     [Theory]
-    [InlineData(10, "X")]
     [InlineData(1, "I")]
-    [InlineData(5, "V")]
     [InlineData(3, "III")]
+    [InlineData(5, "V")]
+    [InlineData(10, "X")]
+    [InlineData(100, "C")]
+    [InlineData(500, "D")]
+    [InlineData(1000, "M")]
     public void TesteConversorInteiroParaRomano(int inteiro, string romano)
     {
 

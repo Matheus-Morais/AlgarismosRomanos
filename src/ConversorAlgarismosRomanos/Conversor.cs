@@ -6,18 +6,16 @@ public class Conversor : ConversorRomano
     public string InteiroParaRomano(int numero)
     {
         Dictionary<int, string> simbolos = new Dictionary<int, string>()
-        {
-            { 1, "I" },
-            { 3, "III" },
-            { 5, "V" },
-            { 10, "X" },
-            { 50, "X" },
-            { 100, "X" },
-            { 500, "X" },
-            { 1000, "X" },
-        };
+        { { 1000, "M" }, { 500, "D" }, { 100, "C" }, { 50, "L" }, { 10, "X" }, { 5, "V" },{ 3, "III" }, { 1, "I"} };
 
-        return simbolos[numero];
+        foreach (int valor in simbolos.Keys)
+        {
+            if (simbolos.ContainsKey(valor))
+            {
+                return simbolos[numero];
+            }
+        }
+        return simbolos[numero]; 
     }
 
     public int RomanoParaInteiro(string romano)
