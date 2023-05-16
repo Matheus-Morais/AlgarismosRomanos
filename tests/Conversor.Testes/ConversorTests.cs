@@ -22,9 +22,13 @@ public class ConversorTests
     [InlineData(3, "III")]
     [InlineData(5, "V")]
     [InlineData(10, "X")]
+    [InlineData(50, "L")]
     [InlineData(100, "C")]
     [InlineData(500, "D")]
     [InlineData(1000, "M")]
+    [InlineData(1555, "MDLV")]
+    [InlineData(3510, "MMMDX")]
+    [InlineData(3999, "MMMCMXCIX")]
     public void TesteConversorInteiroParaRomano(int inteiro, string romano)
     {
 
