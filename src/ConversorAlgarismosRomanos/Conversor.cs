@@ -5,18 +5,20 @@ public class Conversor : ConversorRomano
 {
     public string InteiroParaRomano(int numero)
     {
+        string convertidoRomano = "";
+
         Dictionary<int, string> simbolos = new Dictionary<int, string>()
         { { 1000, "M" }, { 500, "D" }, { 100, "C" }, { 50, "L" }, { 10, "X" }, { 5, "V" },{ 3, "III" }, { 1, "I"} };
 
         foreach (int valor in simbolos.Keys)
         {
-            if (simbolos.ContainsKey(valor))
+            while (numero >= valor)
             {
-
-                return simbolos[numero];
+                convertidoRomano += simbolos[valor];
+                numero -= valor;
             }
         }
-        return simbolos[numero]; 
+        return convertidoRomano; 
     }
 
     public int RomanoParaInteiro(string romano)
